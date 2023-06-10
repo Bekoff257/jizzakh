@@ -31,7 +31,7 @@ html{
 }
 
 .wrapper{
-    background-image: url('/images/jizzakh-region-banner.jpg');
+    background-image: url('./jizzakh-region-banner.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
