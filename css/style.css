@@ -1,0 +1,441 @@
+*, *::after, *::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    font-family: Arial;
+    text-decoration: none;
+    list-style: none;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+:root{
+    --color-1: #fff;
+    --color-2: #000;
+    --color-3: yellow;
+}
+
+.container{
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 1500px;
+}
+
+.wrapper{
+    background-image: url('/images/jizzakh-region-banner.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.nav_list ul .act{
+    background-color: #fff;
+}
+
+.nav_mobile{
+    z-index: 2;
+    display: none;
+    justify-content: center;
+    background: #111315;
+    padding: 10px;
+    width: 100%;
+    border-radius: 0.5em;
+}
+
+.nav_mobile .del svg{
+    color: var(--color-1);
+}
+
+
+.nav_mobile ul li{
+    margin-top: 10px;
+    text-align: center;
+}
+
+.nav_mobile ul li a{
+    color: var(--color-1);
+}
+
+.nav_logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav_logo svg{
+    color: var(--color-1);
+    position: absolute;
+    left: 90%;
+    display: none;
+    color: var(--color-3);
+}
+
+nav{
+    padding: 15px;
+}
+
+nav .nav_content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav_logo h1{
+    color: var(--color-1);
+    font-size: 40px;
+    font-weight: lighter;
+}
+
+.nav_list ul{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    list-style: none;
+}
+
+.nav_list ul li a{
+    text-decoration: none;
+    color: var(--color-1);
+    font-size: 19px;
+    transition: .2s linear;
+}
+
+.nav_list ul li a:hover{
+    color: var(--color-3);
+}
+
+.home{
+    padding-top: 20px;
+}
+
+.home h1{
+    text-align: center;
+    font-size: 70px;
+    letter-spacing: 10px;
+    color: var(--color-1);
+}
+
+.home p{
+    padding-top: 20px;
+    text-align: center;
+    color: var(--color-1);
+}
+
+a#scroll-btn{
+    cursor: pointer;
+    position: absolute;
+    height: 5em;
+    width: 3em;
+    border: 0.4em solid var(--color-1);
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 6.25em;
+    border-radius: 3em;
+}
+
+/* a#scroll-btn::after{
+    position: absolute;
+    content: "Scroll Down";
+    width: 12em;
+    display: block;
+    width: 12em;
+    text-align: center;
+    left: -4.2em;
+    bottom: -2.5em;
+    font-size: 1.6em;
+    color: var(--color-1);
+    letter-spacing: 3px;
+    font-weight: 600;
+} */
+
+a#scroll-btn::before{
+    content: "";
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 1.2em;
+    height: 0.5em;
+    width: 0.5em;
+    background-color: var(--color-1);
+    border-radius: 50%;
+    animation: moved 2s infinite;
+}
+
+.scroll{
+    padding: 200px 0;
+}
+
+/* Animation */
+
+@keyframes moved{
+    80%{
+        opacity: 0.5;
+    }
+    100%{
+        transform: translateY(5.3em);
+        opacity: 0;
+    }
+}
+
+.jizzakh{
+    padding: 30px;
+    background: #111315;
+}
+.jizzakh h1{
+    color: var(--color-1);
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 50px;
+}
+
+h1 span{
+    color: yellow;
+}
+
+.tab-header{
+    padding-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tab-1{
+    padding-top: 40px;
+    display: flex;
+    gap: 20px;
+}
+
+.tab-1 p{
+    color: var(--color-1);
+}
+
+
+.reason{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.reason .rs-text h1{
+    text-align: center;
+}
+
+.rs-text h1 span{
+    color: rgb(255, 255, 0);
+}
+
+section{
+    gap: 50px;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 40px;
+}
+
+.faq{
+    cursor: pointer;
+    max-width: 700px;
+}
+
+.faq .ques{
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 300px;
+}
+
+.faq .ques h3{
+    font-size: 20px;
+}
+
+.ans{
+    max-height: 0;
+    padding-top: 15px;
+    overflow: hidden;
+}
+
+.faq.active .ans{
+    max-height: 300px;
+}
+
+.active svg{
+    transform: rotate(180deg);
+    transition: .2s linear;
+}
+
+.contact{
+    background: #111315;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    padding: 30px;
+}
+
+form{
+    padding-top: 20px;
+    display: grid;
+}
+
+form textarea{
+    resize: none;
+}
+
+input,
+textarea {
+  width: 500px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+textarea{
+    height: 100px;
+}
+
+.text h1{
+    color: var(--color-1);
+    text-align: center;
+}
+
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.btn button{
+    cursor: pointer;
+    padding: 10px 30px;
+    border-radius: 15px;
+    background: var(--color-3);
+    color: var(--color-2);
+}
+
+.foo{
+    background: #111315;
+    color: var(--color-1);
+    padding-top: 20px;
+    text-align: center;
+}
+
+.foo p{
+    padding: 20px;
+}
+
+/* Media Section */
+
+@media (max-width: 620px){
+    /* a#scroll-btn::before{
+        background-color: var(--color-2);
+    }
+
+    a#scroll-btn{
+        border-color: var(--color-2);
+    } */
+
+    a#scroll-btn{
+        transform: translateY(50%);
+    }
+
+    .container{
+        padding: 15px;
+    }
+    .nav_logo h1{
+        font-size: 30px;
+    }
+
+    .nav_list ul{
+        gap: 10px;
+    }
+
+    .nav_list{
+        display: none;
+    }
+
+    .home h1{
+        font-size: 30px;
+        letter-spacing: 5px;
+    }
+
+    .home p{
+        text-align: center;
+        font-size: 15px;
+    }
+
+    .about-text h1{
+        font-size: 25px;
+    }
+
+    .tab-header .tabs .tab-1{
+        flex-direction: column;
+    }
+
+    .tab-1 img{
+        width: 300px;
+        height: 200px;
+    }
+
+    .tab-1 img:nth-child(2){
+        transform: translateY(-150%);
+    }
+
+    .tab-1 p:nth-child(1){
+        transform: translateY(80%);
+    }
+
+    .rs-text h1{
+        font-size: 20px;
+    }
+
+    section{
+        flex-direction: column;
+        display: block;
+        width: 100%;
+        
+    }
+
+    .faq .ques h3{
+        text-align: center;
+        font-size: 15px;
+        
+    }
+
+    .faq .ques{
+        gap: 200px;
+    }
+
+    .faq.active .ans{
+        max-height: 400px;
+    }
+
+    input, textarea{
+        width: 100%;
+    }
+
+    .nav_content .nav_list ul{
+        flex-direction: column;
+    }
+    .nav_logo svg{
+        display: block;
+    }
+
+    .nav_mobile{
+        display: none;
+    }
+}
