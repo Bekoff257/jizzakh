@@ -1,4 +1,4 @@
-addEventListener('DOMContentLoaded', () => {
+window.addEventListener('DOMContentLoaded', () => {
     const faqs = document.querySelectorAll('.faq');
     const button = document.querySelector('#submit');
     const click = document.querySelector('.clk');
